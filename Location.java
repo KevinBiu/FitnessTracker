@@ -16,6 +16,8 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JSeparator;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Location extends JFrame {
 
@@ -75,6 +77,13 @@ public class Location extends JFrame {
 		Ovpanel.add(separator_1);
 		
 		JButton Hbutton = new JButton("");
+		Hbutton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Time t = new Time();
+				t.setVisible(true);
+				dispose();
+			}
+		});
 		Hbutton.setForeground(Color.WHITE);
 		Hbutton.setBackground(Color.LIGHT_GRAY);
 		Hbutton.setBounds(74, 174, 218, 215);
@@ -88,6 +97,13 @@ public class Location extends JFrame {
 		}
 		
 		JButton Wbutton = new JButton("");
+		Wbutton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Time t = new Time();
+				t.setVisible(true);
+				dispose();
+			}
+		});
 		Wbutton.setForeground(Color.WHITE);
 		Wbutton.setBackground(Color.LIGHT_GRAY);
 		Wbutton.setBounds(405, 174, 218, 215);
@@ -104,11 +120,10 @@ public class Location extends JFrame {
 		BLabel.setBounds(0, 0, 730, 480);
 		contentPane.add(BLabel);
 		
+		//Background Img
 		ImageIcon img = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Push-Up.jpg")));
-		
 		Image img2 = img.getImage();
 		Image dimg = img2.getScaledInstance(BLabel.getWidth(), BLabel.getHeight(), Image.SCALE_SMOOTH);
-		
 		ImageIcon i = new ImageIcon(dimg);
 		BLabel.setIcon(i);
 	}

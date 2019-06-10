@@ -15,6 +15,8 @@ import java.awt.Toolkit;
 import java.io.IOException;
 import java.awt.Color;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Gender extends JFrame {
 
@@ -68,6 +70,13 @@ public class Gender extends JFrame {
 		Ovpanel.add(lblFemale);
 		
 		JButton MaleButton = new JButton("");
+		MaleButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				BMI b = new BMI();
+				b.setVisible(true);
+				dispose();
+			}
+		});
 		MaleButton.setBackground(Color.LIGHT_GRAY);
 		MaleButton.setForeground(Color.WHITE);
 		MaleButton.setBounds(133, 187, 218, 215);
@@ -83,6 +92,13 @@ public class Gender extends JFrame {
 		}
 		
 		JButton Febutton = new JButton("");
+		Febutton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				BMI b = new BMI();
+				b.setVisible(true);
+				dispose();
+			}
+		});
 		Febutton.setBackground(Color.LIGHT_GRAY);
 		Febutton.setBounds(469, 187, 218, 215);
 		Ovpanel.add(Febutton);
@@ -99,11 +115,11 @@ public class Gender extends JFrame {
 		JLabel BaLabel = new JLabel("New label");
 		BaLabel.setBounds(0, 0, 825, 531);
 		contentPane.add(BaLabel);
+		
+		//Background Img
 		ImageIcon img = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/workout2.jpg")));
-		
 		Image img2 = img.getImage();
-		Image dimg = img2.getScaledInstance(BaLabel.getWidth(), BaLabel.getHeight(), Image.SCALE_SMOOTH);
-		
+		Image dimg = img2.getScaledInstance(BaLabel.getWidth(), BaLabel.getHeight(), Image.SCALE_SMOOTH);	
 		ImageIcon i = new ImageIcon(dimg);
 		BaLabel.setIcon(i);
 	}

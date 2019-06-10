@@ -18,6 +18,8 @@ import javax.swing.ImageIcon;
 import java.awt.Font;
 import javax.swing.JSeparator;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Start extends JFrame {
 
@@ -68,6 +70,13 @@ public class Start extends JFrame {
 		Overpanel.add(separator);
 		
 		JButton SButton = new JButton("START");
+		SButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Gender g = new Gender();
+				g.setVisible(true);
+				dispose();
+			}
+		});
 		SButton.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 24));
 		SButton.setForeground(Color.WHITE);
 		SButton.setBackground(Color.LIGHT_GRAY);
@@ -79,11 +88,10 @@ public class Start extends JFrame {
 		BLabel.setBounds(0, 0, 825, 562);
 		contentPane.add(BLabel);
 		
+		//Background Img
 		ImageIcon img = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/workout.jpg")));
-		
 		Image img2 = img.getImage();
 		Image dimg = img2.getScaledInstance(BLabel.getWidth(), BLabel.getHeight(), Image.SCALE_SMOOTH);
-		
 		ImageIcon i = new ImageIcon(dimg);
 		BLabel.setIcon(i);
 		

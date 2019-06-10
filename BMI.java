@@ -57,14 +57,14 @@ public class BMI extends JFrame {
 		Ovpanel.setBackground(new Color(0,0,0,200));
 		Ovpanel.setLayout(null);
 		
-		JLabel Hunit = new JLabel("");
+		JLabel Hunit = new JLabel("FT");
 		Hunit.setForeground(Color.WHITE);
 		Hunit.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
 		Hunit.setBackground(new Color(192, 192, 192));
 		Hunit.setBounds(422, 132, 45, 42);
 		Ovpanel.add(Hunit);
 		
-		JLabel Wunit = new JLabel("");
+		JLabel Wunit = new JLabel("LBS");
 		Wunit.setForeground(Color.WHITE);
 		Wunit.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
 		Wunit.setBackground(Color.LIGHT_GRAY);
@@ -110,6 +110,13 @@ public class BMI extends JFrame {
 		Ovpanel.add(textField_1);
 		
 		JButton SubButton = new JButton("SUBMIT");
+		SubButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Location l = new Location();
+				l.setVisible(true);
+				dispose();
+			}
+		});
 		SubButton.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 18));
 		SubButton.setForeground(Color.WHITE);
 		SubButton.setBackground(Color.LIGHT_GRAY);
@@ -146,11 +153,10 @@ public class BMI extends JFrame {
 		BLabel.setBounds(0, 0, 666, 406);
 		contentPane.add(BLabel);
 		
+		//Background Img
 		ImageIcon img = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Shoe.jpg")));
-		
 		Image img2 = img.getImage();
 		Image dimg = img2.getScaledInstance(BLabel.getWidth(), BLabel.getHeight(), Image.SCALE_SMOOTH);
-		
 		ImageIcon i = new ImageIcon(dimg);
 		BLabel.setIcon(i);
 	}
