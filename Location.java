@@ -22,6 +22,7 @@ import java.awt.event.ActionEvent;
 public class Location extends JFrame {
 
 	private JPanel contentPane;
+	Plan p = new Plan();
 
 	/**
 	 * Launch the application.
@@ -82,6 +83,8 @@ public class Location extends JFrame {
 				Time t = new Time();
 				t.setVisible(true);
 				dispose();
+				//To be at home 
+				p.loc = true; 
 			}
 		});
 		Hbutton.setForeground(Color.WHITE);
@@ -102,6 +105,8 @@ public class Location extends JFrame {
 				Time t = new Time();
 				t.setVisible(true);
 				dispose();
+				//To use weights 
+				p.loc = false; 
 			}
 		});
 		Wbutton.setForeground(Color.WHITE);

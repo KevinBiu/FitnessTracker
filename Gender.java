@@ -21,6 +21,7 @@ import java.awt.event.ActionEvent;
 public class Gender extends JFrame {
 
 	private JPanel contentPane;
+	Plan p = new Plan();
 
 	/**
 	 * Launch the application.
@@ -75,6 +76,8 @@ public class Gender extends JFrame {
 				BMI b = new BMI();
 				b.setVisible(true);
 				dispose();
+				//To be a man 
+				p.gen = true; 
 			}
 		});
 		MaleButton.setBackground(Color.LIGHT_GRAY);
@@ -97,6 +100,8 @@ public class Gender extends JFrame {
 				BMI b = new BMI();
 				b.setVisible(true);
 				dispose();
+				//To be a woman 
+				p.gen = false;
 			}
 		});
 		Febutton.setBackground(Color.LIGHT_GRAY);

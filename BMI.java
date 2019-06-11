@@ -21,8 +21,11 @@ import java.awt.event.ActionEvent;
 public class BMI extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
+	private JTextField HField;
+	private JTextField WField;
+	Plan p = new Plan();
+	public boolean whi; 
+	
 
 	/**
 	 * Launch the application.
@@ -57,11 +60,11 @@ public class BMI extends JFrame {
 		Ovpanel.setBackground(new Color(0,0,0,200));
 		Ovpanel.setLayout(null);
 		
-		JLabel Hunit = new JLabel("FT");
+		JLabel Hunit = new JLabel("INCH");
 		Hunit.setForeground(Color.WHITE);
 		Hunit.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
 		Hunit.setBackground(new Color(192, 192, 192));
-		Hunit.setBounds(422, 132, 45, 42);
+		Hunit.setBounds(422, 132, 58, 42);
 		Ovpanel.add(Hunit);
 		
 		JLabel Wunit = new JLabel("LBS");
@@ -93,41 +96,29 @@ public class BMI extends JFrame {
 		lblNewLabel_1.setBounds(111, 214, 111, 62);
 		Ovpanel.add(lblNewLabel_1);
 		
-		textField = new JTextField();
-		textField.setBackground(Color.LIGHT_GRAY);
-		textField.setForeground(Color.WHITE);
-		textField.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 25));
-		textField.setBounds(234, 132, 149, 42);
-		Ovpanel.add(textField);
-		textField.setColumns(10);
+		HField = new JTextField();
+		HField.setBackground(Color.LIGHT_GRAY);
+		HField.setForeground(Color.WHITE);
+		HField.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 25));
+		HField.setBounds(234, 132, 149, 42);
+		Ovpanel.add(HField);
+		HField.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setForeground(Color.WHITE);
-		textField_1.setBackground(Color.LIGHT_GRAY);
-		textField_1.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 25));
-		textField_1.setColumns(10);
-		textField_1.setBounds(234, 229, 149, 42);
-		Ovpanel.add(textField_1);
-		
-		JButton SubButton = new JButton("SUBMIT");
-		SubButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				Location l = new Location();
-				l.setVisible(true);
-				dispose();
-			}
-		});
-		SubButton.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 18));
-		SubButton.setForeground(Color.WHITE);
-		SubButton.setBackground(Color.LIGHT_GRAY);
-		SubButton.setBounds(440, 323, 111, 33);
-		Ovpanel.add(SubButton);
+		WField = new JTextField();
+		WField.setForeground(Color.WHITE);
+		WField.setBackground(Color.LIGHT_GRAY);
+		WField.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 25));
+		WField.setColumns(10);
+		WField.setBounds(234, 229, 149, 42);
+		Ovpanel.add(WField);
 		
 		JButton MButton = new JButton("METRIC");
 		MButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				Hunit.setText("CM");
 				Wunit.setText("KG");
+				
+				whi = true; 
 			}
 		});
 		MButton.setForeground(Color.WHITE);
@@ -139,8 +130,10 @@ public class BMI extends JFrame {
 		JButton IButton = new JButton("IMPERIAL ");
 		IButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Hunit.setText("FT");
-				Wunit.setText("LBS");
+				Hunit.setText("INCH");
+				Wunit.setText("LBS");	
+				
+				whi = false;
 			}
 		});
 		IButton.setForeground(Color.WHITE);
@@ -148,6 +141,37 @@ public class BMI extends JFrame {
 		IButton.setBackground(Color.LIGHT_GRAY);
 		IButton.setBounds(194, 323, 111, 33);
 		Ovpanel.add(IButton);
+		
+		JButton SubButton = new JButton("ENTER");
+		SubButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Location l = new Location();
+				l.setVisible(true);
+				dispose();
+				
+				try {
+					
+					if (whi == true) {
+						float h = Float.parseFloat(HField.getText());
+						float w = Float.parseFloat(WField.getText());
+						p.MBmi(h, w);
+					} else{
+						float h = Float.parseFloat(HField.getText());
+						float w = Float.parseFloat(WField.getText());
+						p.IBmi(h, w);
+					}
+
+				}catch(Exception e1) {
+					System.out.println("Not Good");
+				}
+				
+			}
+		});
+		SubButton.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 18));
+		SubButton.setForeground(Color.WHITE);
+		SubButton.setBackground(Color.LIGHT_GRAY);
+		SubButton.setBounds(440, 323, 111, 33);
+		Ovpanel.add(SubButton);
 		
 		JLabel BLabel = new JLabel("New label");
 		BLabel.setBounds(0, 0, 666, 406);
