@@ -10,6 +10,9 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import FitnessGUI.Trackers.Tracker;
+
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JSeparator;
@@ -20,6 +23,7 @@ import java.awt.event.ActionEvent;
 public class Time extends JFrame {
 
 	private JPanel contentPane;
+	Plan p = new Plan();
 
 	/**
 	 * Launch the application.
@@ -70,6 +74,10 @@ public class Time extends JFrame {
 				Tracker t = new Tracker();
 				t.setVisible(true);
 				dispose();
+				
+				p.tim = 1; 
+			
+				
 			}
 		});
 		OP1.setForeground(Color.WHITE);
@@ -84,6 +92,9 @@ public class Time extends JFrame {
 				Tracker t = new Tracker();
 				t.setVisible(true);
 				dispose();
+				
+				p.tim = 2; 
+		
 			}
 		});
 		OP2.setForeground(Color.WHITE);
@@ -98,6 +109,9 @@ public class Time extends JFrame {
 				Tracker t = new Tracker();
 				t.setVisible(true);
 				dispose();
+				
+				p.tim = 3; 
+			
 			}
 		});
 		OP3.setForeground(Color.WHITE);
