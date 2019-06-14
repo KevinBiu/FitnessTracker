@@ -7,18 +7,18 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import FitnessGUI.Plan;
 import gui.Arm_Circles;
+import gui.Bench_Press;
 import gui.Burpees;
-import gui.Diamond_Push_Up_Knees;
+import gui.Cross_Body_Hammer_Curl;
+import gui.Dumbell_Scaption;
 import gui.Hip_Circles;
 import gui.Leg_Swings;
 import gui.Plank;
-import gui.Plank_Oblique;
-import gui.Plank_Wraps;
 import gui.Push_Ups;
 import gui.Squats;
 import gui.Static_Lunges;
+import gui.Step_Ups;
 
 import java.awt.Color;
 
@@ -40,7 +40,7 @@ import javax.swing.JTextPane;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class Tracker2 extends JFrame {
+public class Tracker4 extends JFrame {
 
 	private JPanel contentPane;
 
@@ -51,7 +51,7 @@ public class Tracker2 extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Tracker2 frame = new Tracker2();
+					Tracker4 frame = new Tracker4();
 					frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 					frame.setVisible(true);
 				} catch (Exception e) {
@@ -64,7 +64,7 @@ public class Tracker2 extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Tracker2() {
+	public Tracker4() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1835, 1000);
 		contentPane = new JPanel();
@@ -74,18 +74,18 @@ public class Tracker2 extends JFrame {
 		contentPane.setLayout(null);
 		
 		
-		JLabel TLabel = new JLabel("Intermediate Workout");
-		TLabel.setBounds(58, 32, 376, 69);
+		JLabel TLabel = new JLabel("Basic Workout");
+		TLabel.setBounds(58, 32, 271, 69);
 		TLabel.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 35));
 		contentPane.add(TLabel);
 		
-		JLabel lblHour = new JLabel("1 Hour");
-		lblHour.setBounds(58, 114, 245, 39);
-		lblHour.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
-		contentPane.add(lblHour);
+		JLabel label_1 = new JLabel("0 - 30 Min\r\n");
+		label_1.setBounds(58, 114, 245, 39);
+		label_1.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
+		contentPane.add(label_1);
 		
 		JSeparator separator = new JSeparator();
-		separator.setBounds(48, 98, 359, 2);
+		separator.setBounds(48, 98, 238, 2);
 		separator.setForeground(Color.BLACK);
 		contentPane.add(separator);
 		
@@ -122,7 +122,7 @@ public class Tracker2 extends JFrame {
 		button.setBounds(546, 178, 196, 69);
 		panel.add(button);
 		button.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
-		button.setBackground(Color.LIGHT_GRAY);
+		button.setBackground(Color.WHITE);
 		
 		JLabel lblHipCircles = new JLabel("Hip Circles\r\n");
 		lblHipCircles.setBounds(292, 178, 154, 39);
@@ -156,7 +156,7 @@ public class Tracker2 extends JFrame {
 		button_2.setBounds(546, 362, 196, 69);
 		panel.add(button_2);
 		button_2.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
-		button_2.setBackground(Color.LIGHT_GRAY);
+		button_2.setBackground(Color.WHITE);
 		
 		JLabel lblArmCircles = new JLabel("Arm Circles\r\n");
 		lblArmCircles.setBounds(292, 362, 178, 39);
@@ -189,7 +189,7 @@ public class Tracker2 extends JFrame {
 		button_3.setBounds(546, 535, 196, 69);
 		panel.add(button_3);
 		button_3.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
-		button_3.setBackground(Color.LIGHT_GRAY);
+		button_3.setBackground(Color.WHITE);
 		
 		JLabel lblSquats = new JLabel("Squats\r\n");
 		lblSquats.setBounds(292, 535, 154, 39);
@@ -223,7 +223,7 @@ public class Tracker2 extends JFrame {
 		button_4.setBounds(546, 699, 196, 69);
 		panel.add(button_4);
 		button_4.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
-		button_4.setBackground(Color.LIGHT_GRAY);
+		button_4.setBackground(Color.WHITE);
 		
 		JLabel lblLegSwings = new JLabel("Leg Swings");
 		lblLegSwings.setBounds(292, 699, 154, 39);
@@ -244,7 +244,7 @@ public class Tracker2 extends JFrame {
 		JPanel panel_1 = new JPanel();
 		panel_1.setLayout(null);
 		panel_1.setBackground(Color.WHITE);
-		panel_1.setBounds(954, 148, 884, 889);
+		panel_1.setBounds(960, 148, 884, 889);
 		contentPane.add(panel_1);
 		
 		JLabel lblWorkout = new JLabel("WORKOUT");
@@ -254,217 +254,149 @@ public class Tracker2 extends JFrame {
 		panel_1.add(lblWorkout);
 		
 		JLabel label5 = new JLabel("New label");
-		label5.setBounds(120, 148, 107, 79);
+		label5.setBounds(119, 191, 107, 79);
 		panel_1.add(label5);
 		
 		JButton button_1 = new JButton("See More Details\r\n");
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Plank_Oblique po = new Plank_Oblique();
-				po.setVisible(true);
-				po.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+				Bench_Press bp = new Bench_Press();
+				bp.setVisible(true);
+				bp.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 			}
 		});
 		button_1.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
-		button_1.setBackground(Color.LIGHT_GRAY);
-		button_1.setBounds(548, 153, 183, 60);
+		button_1.setBackground(Color.WHITE);
+		button_1.setBounds(546, 178, 196, 69);
 		panel_1.add(button_1);
 		
+		JLabel lblPushUps = new JLabel("Bench Press");
+		lblPushUps.setFont(new Font("Trebuchet MS", Font.BOLD, 30));
+		lblPushUps.setBounds(292, 178, 185, 39);
+		panel_1.add(lblPushUps);
+		
 		JTextPane txtpnReps_4 = new JTextPane();
-		txtpnReps_4.setText("Reps : 10\r\nSets : 2");
+		txtpnReps_4.setText("Reps : 8\r\nSets : 3");
 		txtpnReps_4.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
-		txtpnReps_4.setBounds(283, 186, 154, 60);
+		txtpnReps_4.setBounds(293, 230, 196, 92);
 		panel_1.add(txtpnReps_4);
 		
 		JSeparator separator_2 = new JSeparator();
 		separator_2.setForeground(Color.BLACK);
-		separator_2.setBounds(283, 181, 140, 8);
+		separator_2.setBounds(292, 222, 185, 8);
 		panel_1.add(separator_2);
 		
 		JLabel label6 = new JLabel("New label");
-		label6.setBounds(120, 264, 107, 79);
+		label6.setBounds(119, 375, 107, 79);
 		panel_1.add(label6);
 		
 		JButton button_5 = new JButton("See More Details\r\n");
 		button_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Plank_Wraps pw = new Plank_Wraps();
-				pw.setVisible(true);
-				pw.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+				Cross_Body_Hammer_Curl cbhc = new Cross_Body_Hammer_Curl();
+				cbhc.setVisible(true);
+				cbhc.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 			}
 		});
 		button_5.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
-		button_5.setBackground(Color.LIGHT_GRAY);
-		button_5.setBounds(548, 269, 183, 60);
+		button_5.setBackground(Color.WHITE);
+		button_5.setBounds(546, 362, 196, 69);
 		panel_1.add(button_5);
 		
-		JLabel lblPlankWraps = new JLabel("Plank Wraps");
-		lblPlankWraps.setFont(new Font("Trebuchet MS", Font.BOLD, 30));
-		lblPlankWraps.setBounds(283, 253, 173, 36);
-		panel_1.add(lblPlankWraps);
+		JLabel lblStaticLunges = new JLabel("Hammer Curl\r\n");
+		lblStaticLunges.setFont(new Font("Trebuchet MS", Font.BOLD, 30));
+		lblStaticLunges.setBounds(292, 362, 197, 39);
+		panel_1.add(lblStaticLunges);
 		
 		JTextPane txtpnReps_5 = new JTextPane();
-		txtpnReps_5.setText("Reps : 5 each side\r\nSets : 2");
+		txtpnReps_5.setText("Reps : 8 \r\nSets : 4");
 		txtpnReps_5.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
-		txtpnReps_5.setBounds(283, 302, 173, 60);
+		txtpnReps_5.setBounds(293, 414, 196, 92);
 		panel_1.add(txtpnReps_5);
 		
 		JSeparator separator_7 = new JSeparator();
 		separator_7.setForeground(Color.BLACK);
-		separator_7.setBounds(283, 297, 173, 8);
+		separator_7.setBounds(292, 402, 197, 8);
 		panel_1.add(separator_7);
 		
 		JLabel label7 = new JLabel("New label");
-		label7.setBounds(120, 386, 107, 79);
+		label7.setBounds(119, 534, 107, 79);
 		panel_1.add(label7);
 		
 		JButton button_6 = new JButton("See More Details\r\n");
 		button_6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Static_Lunges sl = new Static_Lunges();
-				sl.setVisible(true);
-				sl.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+				Step_Ups su = new Step_Ups();
+				su.setVisible(true);
+				su.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 			}
 		});
 		button_6.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
-		button_6.setBackground(Color.LIGHT_GRAY);
-		button_6.setBounds(548, 391, 183, 60);
+		button_6.setBackground(Color.WHITE);
+		button_6.setBounds(546, 535, 196, 69);
 		panel_1.add(button_6);
 		
-		JLabel lblStaticLunges = new JLabel("Static Lunges");
-		lblStaticLunges.setFont(new Font("Trebuchet MS", Font.BOLD, 30));
-		lblStaticLunges.setBounds(283, 375, 195, 36);
-		panel_1.add(lblStaticLunges);
+		JLabel lblBurpees = new JLabel("Step-Ups");
+		lblBurpees.setFont(new Font("Trebuchet MS", Font.BOLD, 30));
+		lblBurpees.setBounds(292, 535, 154, 39);
+		panel_1.add(lblBurpees);
 		
-		JTextPane textPane_2 = new JTextPane();
-		textPane_2.setText("Reps : 15\r\nSets : 2");
-		textPane_2.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
-		textPane_2.setBounds(283, 424, 154, 60);
-		panel_1.add(textPane_2);
+		JTextPane txtpnReps_6 = new JTextPane();
+		txtpnReps_6.setText("Reps : 8\r\nSets : 3");
+		txtpnReps_6.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
+		txtpnReps_6.setBounds(293, 587, 196, 92);
+		panel_1.add(txtpnReps_6);
 		
 		JSeparator separator_8 = new JSeparator();
 		separator_8.setForeground(Color.BLACK);
-		separator_8.setBounds(283, 419, 195, 8);
+		separator_8.setBounds(292, 579, 126, 8);
 		panel_1.add(separator_8);
 		
 		JLabel label8 = new JLabel("New label");
-		label8.setBounds(120, 508, 107, 79);
+		label8.setBounds(119, 712, 107, 79);
 		panel_1.add(label8);
 		
 		JButton button_7 = new JButton("See More Details\r\n");
 		button_7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Burpees br = new Burpees();
-				br.setVisible(true);
-				br.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+				Dumbell_Scaption ds = new Dumbell_Scaption();
+				ds.setVisible(true);
+				ds.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 			}
 		});
 		button_7.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
-		button_7.setBackground(Color.LIGHT_GRAY);
-		button_7.setBounds(548, 513, 183, 60);
+		button_7.setBackground(Color.WHITE);
+		button_7.setBounds(546, 699, 196, 69);
 		panel_1.add(button_7);
 		
-		JLabel lblBurpees = new JLabel("Burpees");
-		lblBurpees.setFont(new Font("Trebuchet MS", Font.BOLD, 30));
-		lblBurpees.setBounds(283, 497, 140, 36);
-		panel_1.add(lblBurpees);
+		JLabel lblPlank = new JLabel("Dumbbell Scaption");
+		lblPlank.setFont(new Font("Trebuchet MS", Font.BOLD, 23));
+		lblPlank.setBounds(292, 699, 207, 39);
+		panel_1.add(lblPlank);
 		
-		JTextPane txtpnReps_6 = new JTextPane();
-		txtpnReps_6.setText("Reps : 10\r\nSets : 3");
-		txtpnReps_6.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
-		txtpnReps_6.setBounds(283, 546, 154, 60);
-		panel_1.add(txtpnReps_6);
+		JTextPane txtpnMinSets = new JTextPane();
+		txtpnMinSets.setText("Reps : 8 \r\nSets : 3");
+		txtpnMinSets.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
+		txtpnMinSets.setBounds(292, 755, 196, 92);
+		panel_1.add(txtpnMinSets);
 		
 		JSeparator separator_9 = new JSeparator();
 		separator_9.setForeground(Color.BLACK);
-		separator_9.setBounds(283, 541, 140, 8);
+		separator_9.setBounds(292, 736, 197, 2);
 		panel_1.add(separator_9);
 		
-		JLabel label9 = new JLabel("New label");
-		label9.setBounds(120, 627, 107, 79);
-		panel_1.add(label9);
+		JLabel lblMinBreaks = new JLabel("1 min breaks between each exercises");
+		lblMinBreaks.setBounds(386, 46, 465, 39);
+		panel_1.add(lblMinBreaks);
+		lblMinBreaks.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 28));
 		
-		JButton button_8 = new JButton("See More Details\r\n");
-		button_8.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				Diamond_Push_Up_Knees dp = new Diamond_Push_Up_Knees();
-				dp.setVisible(true);
-				dp.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-			}
-		});
-		button_8.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
-		button_8.setBackground(Color.LIGHT_GRAY);
-		button_8.setBounds(548, 632, 183, 60);
-		panel_1.add(button_8);
-		
-		JLabel lblDiamondPushUps = new JLabel("Diamond Push Ups\r\n");
-		lblDiamondPushUps.setFont(new Font("Trebuchet MS", Font.BOLD, 23));
-		lblDiamondPushUps.setBounds(283, 616, 212, 36);
-		panel_1.add(lblDiamondPushUps);
-		
-		JTextPane textPane_4 = new JTextPane();
-		textPane_4.setText("Reps : 15\r\nSets : 2");
-		textPane_4.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
-		textPane_4.setBounds(283, 665, 154, 60);
-		panel_1.add(textPane_4);
-		
-		JSeparator separator_10 = new JSeparator();
-		separator_10.setForeground(Color.BLACK);
-		separator_10.setBounds(283, 660, 195, 8);
-		panel_1.add(separator_10);
-		
-		JLabel label10 = new JLabel("New label");
-		label10.setBounds(120, 744, 107, 79);
-		panel_1.add(label10);
-		
-		JButton button_9 = new JButton("See More Details\r\n");
-		button_9.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				Plank pl = new Plank();
-				pl.setVisible(true);
-				pl.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-			}
-		});
-		button_9.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
-		button_9.setBackground(Color.LIGHT_GRAY);
-		button_9.setBounds(548, 749, 183, 60);
-		panel_1.add(button_9);
-		
-		JLabel lblPlanks = new JLabel("Planks\r\n");
-		lblPlanks.setFont(new Font("Trebuchet MS", Font.BOLD, 30));
-		lblPlanks.setBounds(283, 733, 140, 36);
-		panel_1.add(lblPlanks);
-		
-		JTextPane txtpnMinSets = new JTextPane();
-		txtpnMinSets.setText("2 Min\r\nSets : 2");
-		txtpnMinSets.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
-		txtpnMinSets.setBounds(283, 782, 154, 60);
-		panel_1.add(txtpnMinSets);
-		
-		JSeparator separator_11 = new JSeparator();
-		separator_11.setForeground(Color.BLACK);
-		separator_11.setBounds(283, 777, 107, 8);
-		panel_1.add(separator_11);
-		
-		JTextPane txtpnSidePlanksWith = new JTextPane();
-		txtpnSidePlanksWith.setText("Side planks with \r\noblique wraps");
-		txtpnSidePlanksWith.setFont(new Font("Trebuchet MS", Font.BOLD, 20));
-		txtpnSidePlanksWith.setBounds(283, 124, 173, 60);
-		panel_1.add(txtpnSidePlanksWith);
-		
-		JLabel label_2 = new JLabel("3 min breaks between each exercises");
-		label_2.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 28));
-		label_2.setBounds(370, 36, 465, 39);
-		panel_1.add(label_2);
-		
-	// ---------------------------------------------------------------------------------------------------------------
-		
-		//WarmUp pictures 
 		ImageIcon img1 = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Warmup.png")));
 		Image img_1 = img1.getImage();
 		Image dimg = img_1.getScaledInstance(label1.getWidth(), label1.getHeight(), Image.SCALE_SMOOTH);
 		ImageIcon i = new ImageIcon(dimg);
 		label1.setIcon(i);
+		
+	// ------------------------------------------------------------------------------------------------------------------
 		
 		//WarmUp pictures 
 		ImageIcon img2 = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Warmup.png")));
@@ -516,18 +448,6 @@ public class Tracker2 extends JFrame {
 		Image dimg8 = img_8.getScaledInstance(label8.getWidth(), label8.getHeight(), Image.SCALE_SMOOTH);
 		ImageIcon i8 = new ImageIcon(dimg8);
 		label8.setIcon(i8);
-		
-		ImageIcon img9 = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/WHome.png")));
-		Image img_9 = img9.getImage();
-		Image dimg9 = img_9.getScaledInstance(label9.getWidth(), label9.getHeight(), Image.SCALE_SMOOTH);
-		ImageIcon i9 = new ImageIcon(dimg9);
-		label9.setIcon(i9);
-		
-		//Workout pictures 
-		ImageIcon img10 = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/WHome.png")));
-		Image img_10 = img10.getImage();
-		Image dimg10 = img_10.getScaledInstance(label10.getWidth(), label10.getHeight(), Image.SCALE_SMOOTH);
-		ImageIcon i10 = new ImageIcon(dimg10);
-		label10.setIcon(i10);
+
 	}
 }

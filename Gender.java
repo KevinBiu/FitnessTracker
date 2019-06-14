@@ -77,7 +77,7 @@ public class Gender extends JFrame {
 				b.setVisible(true);
 				dispose();
 				//To be a man 
-				p.gen = true; 
+			
 			}
 		});
 		MaleButton.setBackground(Color.LIGHT_GRAY);
@@ -101,7 +101,7 @@ public class Gender extends JFrame {
 				b.setVisible(true);
 				dispose();
 				//To be a woman 
-				p.gen = false;
+			
 			}
 		});
 		Febutton.setBackground(Color.LIGHT_GRAY);

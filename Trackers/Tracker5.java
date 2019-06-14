@@ -9,16 +9,23 @@ import javax.swing.border.EmptyBorder;
 
 import FitnessGUI.Plan;
 import gui.Arm_Circles;
+import gui.Bench_Press;
+import gui.Bent_Over_Row;
 import gui.Burpees;
 import gui.Diamond_Push_Up_Knees;
+import gui.Dumbell_Scaption;
 import gui.Hip_Circles;
+import gui.Leg_Crossovers;
 import gui.Leg_Swings;
 import gui.Plank;
 import gui.Plank_Oblique;
 import gui.Plank_Wraps;
 import gui.Push_Ups;
+import gui.Side_Plank_Dumbbell_Reach;
 import gui.Squats;
 import gui.Static_Lunges;
+import gui.Travelling_Dumbell_Swing;
+import gui.Walking_Lunges;
 
 import java.awt.Color;
 
@@ -40,7 +47,7 @@ import javax.swing.JTextPane;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class Tracker2 extends JFrame {
+public class Tracker5 extends JFrame {
 
 	private JPanel contentPane;
 
@@ -51,7 +58,7 @@ public class Tracker2 extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Tracker2 frame = new Tracker2();
+					Tracker5 frame = new Tracker5();
 					frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 					frame.setVisible(true);
 				} catch (Exception e) {
@@ -64,7 +71,7 @@ public class Tracker2 extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Tracker2() {
+	public Tracker5() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1835, 1000);
 		contentPane = new JPanel();
@@ -214,9 +221,9 @@ public class Tracker2 extends JFrame {
 		JButton button_4 = new JButton("See More Details\r\n");
 		button_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Leg_Swings ls = new Leg_Swings();
-				ls.setVisible(true);
-				ls.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+				Leg_Crossovers lc = new Leg_Crossovers();
+				lc.setVisible(true);
+				lc.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 				
 			}
 		});
@@ -225,8 +232,8 @@ public class Tracker2 extends JFrame {
 		button_4.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
 		button_4.setBackground(Color.LIGHT_GRAY);
 		
-		JLabel lblLegSwings = new JLabel("Leg Swings");
-		lblLegSwings.setBounds(292, 699, 154, 39);
+		JLabel lblLegSwings = new JLabel("Leg Crossover");
+		lblLegSwings.setBounds(292, 699, 197, 39);
 		panel.add(lblLegSwings);
 		lblLegSwings.setFont(new Font("Trebuchet MS", Font.BOLD, 30));
 		
@@ -237,7 +244,7 @@ public class Tracker2 extends JFrame {
 		panel.add(txtpnReps_3);
 		
 		JSeparator separator_6 = new JSeparator();
-		separator_6.setBounds(292, 742, 133, 2);
+		separator_6.setBounds(292, 742, 197, 8);
 		panel.add(separator_6);
 		separator_6.setForeground(Color.BLACK);
 		
@@ -260,9 +267,9 @@ public class Tracker2 extends JFrame {
 		JButton button_1 = new JButton("See More Details\r\n");
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Plank_Oblique po = new Plank_Oblique();
-				po.setVisible(true);
-				po.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+				Bent_Over_Row bor = new Bent_Over_Row();
+				bor.setVisible(true);
+				bor.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 			}
 		});
 		button_1.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
@@ -271,14 +278,14 @@ public class Tracker2 extends JFrame {
 		panel_1.add(button_1);
 		
 		JTextPane txtpnReps_4 = new JTextPane();
-		txtpnReps_4.setText("Reps : 10\r\nSets : 2");
+		txtpnReps_4.setText("Reps : 15\r\nSets : 3");
 		txtpnReps_4.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
 		txtpnReps_4.setBounds(283, 186, 154, 60);
 		panel_1.add(txtpnReps_4);
 		
 		JSeparator separator_2 = new JSeparator();
 		separator_2.setForeground(Color.BLACK);
-		separator_2.setBounds(283, 181, 140, 8);
+		separator_2.setBounds(283, 181, 217, 8);
 		panel_1.add(separator_2);
 		
 		JLabel label6 = new JLabel("New label");
@@ -288,9 +295,9 @@ public class Tracker2 extends JFrame {
 		JButton button_5 = new JButton("See More Details\r\n");
 		button_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Plank_Wraps pw = new Plank_Wraps();
-				pw.setVisible(true);
-				pw.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+				Walking_Lunges wl = new Walking_Lunges();
+				wl.setVisible(true);
+				wl.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 			}
 		});
 		button_5.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
@@ -298,20 +305,20 @@ public class Tracker2 extends JFrame {
 		button_5.setBounds(548, 269, 183, 60);
 		panel_1.add(button_5);
 		
-		JLabel lblPlankWraps = new JLabel("Plank Wraps");
+		JLabel lblPlankWraps = new JLabel("Walking Lunge\r\n");
 		lblPlankWraps.setFont(new Font("Trebuchet MS", Font.BOLD, 30));
-		lblPlankWraps.setBounds(283, 253, 173, 36);
+		lblPlankWraps.setBounds(283, 253, 217, 36);
 		panel_1.add(lblPlankWraps);
 		
 		JTextPane txtpnReps_5 = new JTextPane();
-		txtpnReps_5.setText("Reps : 5 each side\r\nSets : 2");
+		txtpnReps_5.setText("Reps : 20\r\nSets : 3");
 		txtpnReps_5.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
 		txtpnReps_5.setBounds(283, 302, 173, 60);
 		panel_1.add(txtpnReps_5);
 		
 		JSeparator separator_7 = new JSeparator();
 		separator_7.setForeground(Color.BLACK);
-		separator_7.setBounds(283, 297, 173, 8);
+		separator_7.setBounds(283, 297, 217, 8);
 		panel_1.add(separator_7);
 		
 		JLabel label7 = new JLabel("New label");
@@ -321,9 +328,9 @@ public class Tracker2 extends JFrame {
 		JButton button_6 = new JButton("See More Details\r\n");
 		button_6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Static_Lunges sl = new Static_Lunges();
-				sl.setVisible(true);
-				sl.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+				Travelling_Dumbell_Swing tds = new Travelling_Dumbell_Swing();
+				tds.setVisible(true);
+				tds.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 			}
 		});
 		button_6.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
@@ -331,9 +338,9 @@ public class Tracker2 extends JFrame {
 		button_6.setBounds(548, 391, 183, 60);
 		panel_1.add(button_6);
 		
-		JLabel lblStaticLunges = new JLabel("Static Lunges");
+		JLabel lblStaticLunges = new JLabel("Dumbbell Swing ");
 		lblStaticLunges.setFont(new Font("Trebuchet MS", Font.BOLD, 30));
-		lblStaticLunges.setBounds(283, 375, 195, 36);
+		lblStaticLunges.setBounds(283, 375, 240, 36);
 		panel_1.add(lblStaticLunges);
 		
 		JTextPane textPane_2 = new JTextPane();
@@ -344,7 +351,7 @@ public class Tracker2 extends JFrame {
 		
 		JSeparator separator_8 = new JSeparator();
 		separator_8.setForeground(Color.BLACK);
-		separator_8.setBounds(283, 419, 195, 8);
+		separator_8.setBounds(283, 419, 217, 8);
 		panel_1.add(separator_8);
 		
 		JLabel label8 = new JLabel("New label");
@@ -354,9 +361,9 @@ public class Tracker2 extends JFrame {
 		JButton button_7 = new JButton("See More Details\r\n");
 		button_7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Burpees br = new Burpees();
-				br.setVisible(true);
-				br.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+				Bench_Press bp = new Bench_Press();
+				bp.setVisible(true);
+				bp.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 			}
 		});
 		button_7.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
@@ -364,20 +371,20 @@ public class Tracker2 extends JFrame {
 		button_7.setBounds(548, 513, 183, 60);
 		panel_1.add(button_7);
 		
-		JLabel lblBurpees = new JLabel("Burpees");
+		JLabel lblBurpees = new JLabel("Bench Press");
 		lblBurpees.setFont(new Font("Trebuchet MS", Font.BOLD, 30));
-		lblBurpees.setBounds(283, 497, 140, 36);
+		lblBurpees.setBounds(283, 497, 173, 36);
 		panel_1.add(lblBurpees);
 		
 		JTextPane txtpnReps_6 = new JTextPane();
-		txtpnReps_6.setText("Reps : 10\r\nSets : 3");
+		txtpnReps_6.setText("Reps : 8\r\nSets : 3");
 		txtpnReps_6.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
 		txtpnReps_6.setBounds(283, 546, 154, 60);
 		panel_1.add(txtpnReps_6);
 		
 		JSeparator separator_9 = new JSeparator();
 		separator_9.setForeground(Color.BLACK);
-		separator_9.setBounds(283, 541, 140, 8);
+		separator_9.setBounds(283, 541, 173, 8);
 		panel_1.add(separator_9);
 		
 		JLabel label9 = new JLabel("New label");
@@ -387,9 +394,9 @@ public class Tracker2 extends JFrame {
 		JButton button_8 = new JButton("See More Details\r\n");
 		button_8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Diamond_Push_Up_Knees dp = new Diamond_Push_Up_Knees();
-				dp.setVisible(true);
-				dp.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+				Dumbell_Scaption ds = new Dumbell_Scaption();
+				ds.setVisible(true);
+				ds.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 			}
 		});
 		button_8.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
@@ -397,16 +404,16 @@ public class Tracker2 extends JFrame {
 		button_8.setBounds(548, 632, 183, 60);
 		panel_1.add(button_8);
 		
-		JLabel lblDiamondPushUps = new JLabel("Diamond Push Ups\r\n");
+		JLabel lblDiamondPushUps = new JLabel("Dumbbell Scaption");
 		lblDiamondPushUps.setFont(new Font("Trebuchet MS", Font.BOLD, 23));
 		lblDiamondPushUps.setBounds(283, 616, 212, 36);
 		panel_1.add(lblDiamondPushUps);
 		
-		JTextPane textPane_4 = new JTextPane();
-		textPane_4.setText("Reps : 15\r\nSets : 2");
-		textPane_4.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
-		textPane_4.setBounds(283, 665, 154, 60);
-		panel_1.add(textPane_4);
+		JTextPane txtpnReps_7 = new JTextPane();
+		txtpnReps_7.setText("Reps : 8\r\nSets : 3");
+		txtpnReps_7.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
+		txtpnReps_7.setBounds(283, 665, 154, 60);
+		panel_1.add(txtpnReps_7);
 		
 		JSeparator separator_10 = new JSeparator();
 		separator_10.setForeground(Color.BLACK);
@@ -420,9 +427,9 @@ public class Tracker2 extends JFrame {
 		JButton button_9 = new JButton("See More Details\r\n");
 		button_9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Plank pl = new Plank();
-				pl.setVisible(true);
-				pl.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+				Side_Plank_Dumbbell_Reach spdr = new Side_Plank_Dumbbell_Reach();
+				spdr.setVisible(true);
+				spdr.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 			}
 		});
 		button_9.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
@@ -430,26 +437,26 @@ public class Tracker2 extends JFrame {
 		button_9.setBounds(548, 749, 183, 60);
 		panel_1.add(button_9);
 		
-		JLabel lblPlanks = new JLabel("Planks\r\n");
-		lblPlanks.setFont(new Font("Trebuchet MS", Font.BOLD, 30));
-		lblPlanks.setBounds(283, 733, 140, 36);
+		JLabel lblPlanks = new JLabel("Side Plank w/ Dumbell");
+		lblPlanks.setFont(new Font("Trebuchet MS", Font.BOLD, 20));
+		lblPlanks.setBounds(283, 733, 240, 36);
 		panel_1.add(lblPlanks);
 		
 		JTextPane txtpnMinSets = new JTextPane();
-		txtpnMinSets.setText("2 Min\r\nSets : 2");
+		txtpnMinSets.setText("5 Each Side");
 		txtpnMinSets.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
 		txtpnMinSets.setBounds(283, 782, 154, 60);
 		panel_1.add(txtpnMinSets);
 		
 		JSeparator separator_11 = new JSeparator();
 		separator_11.setForeground(Color.BLACK);
-		separator_11.setBounds(283, 777, 107, 8);
+		separator_11.setBounds(283, 777, 217, 8);
 		panel_1.add(separator_11);
 		
 		JTextPane txtpnSidePlanksWith = new JTextPane();
-		txtpnSidePlanksWith.setText("Side planks with \r\noblique wraps");
-		txtpnSidePlanksWith.setFont(new Font("Trebuchet MS", Font.BOLD, 20));
-		txtpnSidePlanksWith.setBounds(283, 124, 173, 60);
+		txtpnSidePlanksWith.setText("Bent-Over Row");
+		txtpnSidePlanksWith.setFont(new Font("Trebuchet MS", Font.BOLD, 30));
+		txtpnSidePlanksWith.setBounds(281, 140, 227, 37);
 		panel_1.add(txtpnSidePlanksWith);
 		
 		JLabel label_2 = new JLabel("3 min breaks between each exercises");
@@ -457,77 +464,77 @@ public class Tracker2 extends JFrame {
 		label_2.setBounds(370, 36, 465, 39);
 		panel_1.add(label_2);
 		
-	// ---------------------------------------------------------------------------------------------------------------
+		// ---------------------------------------------------------------------------------------------------------------
 		
-		//WarmUp pictures 
-		ImageIcon img1 = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Warmup.png")));
-		Image img_1 = img1.getImage();
-		Image dimg = img_1.getScaledInstance(label1.getWidth(), label1.getHeight(), Image.SCALE_SMOOTH);
-		ImageIcon i = new ImageIcon(dimg);
-		label1.setIcon(i);
-		
-		//WarmUp pictures 
-		ImageIcon img2 = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Warmup.png")));
-		Image img_2 = img2.getImage();
-		Image dimg2 = img_2.getScaledInstance(label2.getWidth(), label2.getHeight(), Image.SCALE_SMOOTH);
-		ImageIcon i2 = new ImageIcon(dimg2);
-		label2.setIcon(i2);
-		
-		//WarmUp pictures 
-		ImageIcon img3 = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Warmup.png")));
-		Image img_3 = img3.getImage();
-		Image dimg3 = img_3.getScaledInstance(label3.getWidth(), label3.getHeight(), Image.SCALE_SMOOTH);
-		ImageIcon i3 = new ImageIcon(dimg3);
-		label3.setIcon(i3);
-		
-		//WarmUp pictures 
-		ImageIcon img4 = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Warmup.png")));
-		Image img_4 = img4.getImage();
-		Image dimg4 = img_4.getScaledInstance(label4.getWidth(), label4.getHeight(), Image.SCALE_SMOOTH);
-		ImageIcon i4 = new ImageIcon(dimg4);
-		label4.setIcon(i4);
-		
-	// ----------------------------------------------------------------------------------------------------------------------------------
-		
-		//Workout Picture
-		ImageIcon img5 = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/WHome.png")));
-		Image img_5 = img5.getImage();
-		Image dimg5 = img_5.getScaledInstance(label5.getWidth(), label5.getHeight(), Image.SCALE_SMOOTH);
-		ImageIcon i5 = new ImageIcon(dimg5);
-		label5.setIcon(i5);
-		
-		//Workout pictures 
-		ImageIcon img6 = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/WHome.png")));
-		Image img_6 = img6.getImage();
-		Image dimg6 = img_6.getScaledInstance(label6.getWidth(), label6.getHeight(), Image.SCALE_SMOOTH);
-		ImageIcon i6 = new ImageIcon(dimg6);
-		label6.setIcon(i6);
-		
-		//Workout pictures 
-		ImageIcon img7 = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/WHome.png")));
-		Image img_7 = img7.getImage();
-		Image dimg7 = img_7.getScaledInstance(label7.getWidth(), label7.getHeight(), Image.SCALE_SMOOTH);
-		ImageIcon i7 = new ImageIcon(dimg7);
-		label7.setIcon(i7);
-		
-		//Workout pictures 
-		ImageIcon img8 = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/WHome.png")));
-		Image img_8 = img8.getImage();
-		Image dimg8 = img_8.getScaledInstance(label8.getWidth(), label8.getHeight(), Image.SCALE_SMOOTH);
-		ImageIcon i8 = new ImageIcon(dimg8);
-		label8.setIcon(i8);
-		
-		ImageIcon img9 = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/WHome.png")));
-		Image img_9 = img9.getImage();
-		Image dimg9 = img_9.getScaledInstance(label9.getWidth(), label9.getHeight(), Image.SCALE_SMOOTH);
-		ImageIcon i9 = new ImageIcon(dimg9);
-		label9.setIcon(i9);
-		
-		//Workout pictures 
-		ImageIcon img10 = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/WHome.png")));
-		Image img_10 = img10.getImage();
-		Image dimg10 = img_10.getScaledInstance(label10.getWidth(), label10.getHeight(), Image.SCALE_SMOOTH);
-		ImageIcon i10 = new ImageIcon(dimg10);
-		label10.setIcon(i10);
+				//WarmUp pictures 
+				ImageIcon img1 = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Warmup.png")));
+				Image img_1 = img1.getImage();
+				Image dimg = img_1.getScaledInstance(label1.getWidth(), label1.getHeight(), Image.SCALE_SMOOTH);
+				ImageIcon i = new ImageIcon(dimg);
+				label1.setIcon(i);
+				
+				//WarmUp pictures 
+				ImageIcon img2 = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Warmup.png")));
+				Image img_2 = img2.getImage();
+				Image dimg2 = img_2.getScaledInstance(label2.getWidth(), label2.getHeight(), Image.SCALE_SMOOTH);
+				ImageIcon i2 = new ImageIcon(dimg2);
+				label2.setIcon(i2);
+				
+				//WarmUp pictures 
+				ImageIcon img3 = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Warmup.png")));
+				Image img_3 = img3.getImage();
+				Image dimg3 = img_3.getScaledInstance(label3.getWidth(), label3.getHeight(), Image.SCALE_SMOOTH);
+				ImageIcon i3 = new ImageIcon(dimg3);
+				label3.setIcon(i3);
+				
+				//WarmUp pictures 
+				ImageIcon img4 = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Warmup.png")));
+				Image img_4 = img4.getImage();
+				Image dimg4 = img_4.getScaledInstance(label4.getWidth(), label4.getHeight(), Image.SCALE_SMOOTH);
+				ImageIcon i4 = new ImageIcon(dimg4);
+				label4.setIcon(i4);
+				
+			// ----------------------------------------------------------------------------------------------------------------------------------
+				
+				//Workout Picture
+				ImageIcon img5 = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/WHome.png")));
+				Image img_5 = img5.getImage();
+				Image dimg5 = img_5.getScaledInstance(label5.getWidth(), label5.getHeight(), Image.SCALE_SMOOTH);
+				ImageIcon i5 = new ImageIcon(dimg5);
+				label5.setIcon(i5);
+				
+				//Workout pictures 
+				ImageIcon img6 = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/WHome.png")));
+				Image img_6 = img6.getImage();
+				Image dimg6 = img_6.getScaledInstance(label6.getWidth(), label6.getHeight(), Image.SCALE_SMOOTH);
+				ImageIcon i6 = new ImageIcon(dimg6);
+				label6.setIcon(i6);
+				
+				//Workout pictures 
+				ImageIcon img7 = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/WHome.png")));
+				Image img_7 = img7.getImage();
+				Image dimg7 = img_7.getScaledInstance(label7.getWidth(), label7.getHeight(), Image.SCALE_SMOOTH);
+				ImageIcon i7 = new ImageIcon(dimg7);
+				label7.setIcon(i7);
+				
+				//Workout pictures 
+				ImageIcon img8 = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/WHome.png")));
+				Image img_8 = img8.getImage();
+				Image dimg8 = img_8.getScaledInstance(label8.getWidth(), label8.getHeight(), Image.SCALE_SMOOTH);
+				ImageIcon i8 = new ImageIcon(dimg8);
+				label8.setIcon(i8);
+				
+				ImageIcon img9 = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/WHome.png")));
+				Image img_9 = img9.getImage();
+				Image dimg9 = img_9.getScaledInstance(label9.getWidth(), label9.getHeight(), Image.SCALE_SMOOTH);
+				ImageIcon i9 = new ImageIcon(dimg9);
+				label9.setIcon(i9);
+				
+				//Workout pictures 
+				ImageIcon img10 = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/WHome.png")));
+				Image img_10 = img10.getImage();
+				Image dimg10 = img_10.getScaledInstance(label10.getWidth(), label10.getHeight(), Image.SCALE_SMOOTH);
+				ImageIcon i10 = new ImageIcon(dimg10);
+				label10.setIcon(i10);
 	}
 }

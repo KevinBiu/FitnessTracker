@@ -3,10 +3,6 @@ package FitnessGUI;
 public class Plan {
 	
 	public static float Bmi; 
-	public boolean loc = true ; 
-	public boolean gen = true; 
-	public static int tim; 
-	
 	
 	// Calculate the BMI using the metric system
 	public static void MBmi (float h, float w) {
@@ -19,19 +15,10 @@ public class Plan {
 		System.out.println(Bmi);
 	}
 	
-	public static void time() {
-		switch (tim) {
-		  case 1:
-		    System.out.println("Option 1");
-		    break;
-		  case 2:
-		    System.out.println("Option 2");
-		    break;
-		  case 3:
-		    System.out.println("Option 3");
-		    break;
-		}
+	public static void showBmi() {
+		
 	}
+	
 	
 
 }

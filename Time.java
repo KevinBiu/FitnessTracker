@@ -12,6 +12,11 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import FitnessGUI.Trackers.Tracker;
+import FitnessGUI.Trackers.Tracker2;
+import FitnessGUI.Trackers.Tracker3;
+import FitnessGUI.Trackers.Tracker4;
+import FitnessGUI.Trackers.Tracker5;
+import FitnessGUI.Trackers.Tracker6;
 
 import javax.swing.JLabel;
 import java.awt.Font;
@@ -24,6 +29,7 @@ public class Time extends JFrame {
 
 	private JPanel contentPane;
 	Plan p = new Plan();
+	Location l = new Location();
 
 	/**
 	 * Launch the application.
@@ -71,12 +77,18 @@ public class Time extends JFrame {
 		JButton OP1 = new JButton("0 - 30 Min");
 		OP1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Tracker t = new Tracker();
-				t.setVisible(true);
-				dispose();
 				
-				p.tim = 1; 
-			
+				if (l.loc) {
+					Tracker t = new Tracker();
+					System.out.print(l.loc);
+					t.setVisible(true);
+					dispose();
+				}else {
+					System.out.print(l.loc);
+					Tracker4 t4 = new Tracker4();
+					t4.setVisible(true);
+					dispose();
+				}	
 				
 			}
 		});
@@ -89,11 +101,15 @@ public class Time extends JFrame {
 		JButton OP2 = new JButton("1 - 2 Hours");
 		OP2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Tracker t = new Tracker();
-				t.setVisible(true);
-				dispose();
-				
-				p.tim = 2; 
+				if (l.loc) {
+					Tracker2 t2 = new Tracker2();
+					t2.setVisible(true);
+					dispose();
+				}else {
+					Tracker5 t5 = new Tracker5();
+					t5.setVisible(true);
+					dispose();
+				}	
 		
 			}
 		});
@@ -106,11 +122,15 @@ public class Time extends JFrame {
 		JButton OP3 = new JButton("2 + Hours");
 		OP3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Tracker t = new Tracker();
-				t.setVisible(true);
-				dispose();
-				
-				p.tim = 3; 
+				if (l.loc) {
+					Tracker3 t3 = new Tracker3();
+					t3.setVisible(true);
+					dispose();
+				}else {
+					Tracker6 t6 = new Tracker6();
+					t6.setVisible(true);
+					dispose();
+				}	 
 			
 			}
 		});

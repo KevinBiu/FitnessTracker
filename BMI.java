@@ -117,7 +117,7 @@ public class BMI extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				Hunit.setText("CM");
 				Wunit.setText("KG");
-				
+				//Uses the metric system to calculate BMI
 				whi = true; 
 			}
 		});
@@ -132,7 +132,7 @@ public class BMI extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				Hunit.setText("INCH");
 				Wunit.setText("LBS");	
-				
+				//Uses the Imperial system to calculate BMI
 				whi = false;
 			}
 		});
@@ -160,6 +160,8 @@ public class BMI extends JFrame {
 						float w = Float.parseFloat(WField.getText());
 						p.IBmi(h, w);
 					}
+					
+					
 
 				}catch(Exception e1) {
 					System.out.println("Not Good");

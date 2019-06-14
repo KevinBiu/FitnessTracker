@@ -23,6 +23,7 @@ public class Location extends JFrame {
 
 	private JPanel contentPane;
 	Plan p = new Plan();
+	public static boolean loc ; 
 
 	/**
 	 * Launch the application.
@@ -84,7 +85,8 @@ public class Location extends JFrame {
 				t.setVisible(true);
 				dispose();
 				//To be at home 
-				p.loc = true; 
+				loc = true; 
+				System.out.print(loc);
 			}
 		});
 		Hbutton.setForeground(Color.WHITE);
@@ -106,7 +108,9 @@ public class Location extends JFrame {
 				t.setVisible(true);
 				dispose();
 				//To use weights 
-				p.loc = false; 
+				loc = false;
+				System.out.print(loc);
+				
 			}
 		});
 		Wbutton.setForeground(Color.WHITE);

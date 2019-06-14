@@ -17,8 +17,13 @@ import gui.Squats;
 import gui.Static_Lunges;
 
 import java.awt.Color;
+
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.Font;
+import java.awt.Image;
+import java.awt.Toolkit;
+
 import javax.swing.JLabel;
 import javax.swing.JSeparator;
 import javax.swing.JScrollBar;
@@ -98,9 +103,9 @@ public class Tracker extends JFrame {
 		lblWarmups.setHorizontalAlignment(SwingConstants.LEFT);
 		lblWarmups.setFont(new Font("Yu Gothic UI Semilight", Font.BOLD, 50));
 		
-		JLabel label = new JLabel("New label");
-		label.setBounds(119, 191, 107, 79);
-		panel.add(label);
+		JLabel label1 = new JLabel("New label");
+		label1.setBounds(119, 191, 107, 79);
+		panel.add(label1);
 		
 		JButton button = new JButton("See More Details\r\n");
 		button.addActionListener(new ActionListener() {
@@ -131,9 +136,9 @@ public class Tracker extends JFrame {
 		panel.add(separator_1);
 		separator_1.setForeground(Color.BLACK);
 		
-		JLabel label_7 = new JLabel("New label");
-		label_7.setBounds(119, 375, 107, 79);
-		panel.add(label_7);
+		JLabel label2 = new JLabel("New label");
+		label2.setBounds(119, 375, 107, 79);
+		panel.add(label2);
 		
 		JButton button_2 = new JButton("See More Details\r\n");
 		button_2.addActionListener(new ActionListener() {
@@ -165,9 +170,9 @@ public class Tracker extends JFrame {
 		panel.add(separator_4);
 		separator_4.setForeground(Color.BLACK);
 		
-		JLabel label_10 = new JLabel("New label");
-		label_10.setBounds(119, 534, 107, 79);
-		panel.add(label_10);
+		JLabel label3 = new JLabel("New label");
+		label3.setBounds(119, 534, 107, 79);
+		panel.add(label3);
 		
 		JButton button_3 = new JButton("See More Details\r\n");
 		button_3.addActionListener(new ActionListener() {
@@ -198,9 +203,9 @@ public class Tracker extends JFrame {
 		panel.add(separator_5);
 		separator_5.setForeground(Color.BLACK);
 		
-		JLabel label_13 = new JLabel("New label");
-		label_13.setBounds(119, 712, 107, 79);
-		panel.add(label_13);
+		JLabel label4 = new JLabel("New label");
+		label4.setBounds(119, 712, 107, 79);
+		panel.add(label4);
 		
 		JButton button_4 = new JButton("See More Details\r\n");
 		button_4.addActionListener(new ActionListener() {
@@ -244,9 +249,9 @@ public class Tracker extends JFrame {
 		lblWorkout.setBounds(66, 13, 457, 87);
 		panel_1.add(lblWorkout);
 		
-		JLabel label_3 = new JLabel("New label");
-		label_3.setBounds(119, 191, 107, 79);
-		panel_1.add(label_3);
+		JLabel label5 = new JLabel("New label");
+		label5.setBounds(119, 191, 107, 79);
+		panel_1.add(label5);
 		
 		JButton button_1 = new JButton("See More Details\r\n");
 		button_1.addActionListener(new ActionListener() {
@@ -277,9 +282,9 @@ public class Tracker extends JFrame {
 		separator_2.setBounds(292, 222, 154, 8);
 		panel_1.add(separator_2);
 		
-		JLabel label_5 = new JLabel("New label");
-		label_5.setBounds(119, 375, 107, 79);
-		panel_1.add(label_5);
+		JLabel label6 = new JLabel("New label");
+		label6.setBounds(119, 375, 107, 79);
+		panel_1.add(label6);
 		
 		JButton button_5 = new JButton("See More Details\r\n");
 		button_5.addActionListener(new ActionListener() {
@@ -310,9 +315,9 @@ public class Tracker extends JFrame {
 		separator_7.setBounds(292, 402, 197, 8);
 		panel_1.add(separator_7);
 		
-		JLabel label_8 = new JLabel("New label");
-		label_8.setBounds(119, 534, 107, 79);
-		panel_1.add(label_8);
+		JLabel label7 = new JLabel("New label");
+		label7.setBounds(119, 534, 107, 79);
+		panel_1.add(label7);
 		
 		JButton button_6 = new JButton("See More Details\r\n");
 		button_6.addActionListener(new ActionListener() {
@@ -343,9 +348,9 @@ public class Tracker extends JFrame {
 		separator_8.setBounds(292, 579, 126, 8);
 		panel_1.add(separator_8);
 		
-		JLabel label_11 = new JLabel("New label");
-		label_11.setBounds(119, 712, 107, 79);
-		panel_1.add(label_11);
+		JLabel label8 = new JLabel("New label");
+		label8.setBounds(119, 712, 107, 79);
+		panel_1.add(label8);
 		
 		JButton button_7 = new JButton("See More Details\r\n");
 		button_7.addActionListener(new ActionListener() {
@@ -375,5 +380,76 @@ public class Tracker extends JFrame {
 		separator_9.setForeground(Color.BLACK);
 		separator_9.setBounds(292, 736, 95, 8);
 		panel_1.add(separator_9);
+		
+		JLabel lblMinBreaks = new JLabel("3 min breaks between each exercises");
+		lblMinBreaks.setBounds(386, 46, 465, 39);
+		panel_1.add(lblMinBreaks);
+		lblMinBreaks.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 28));
+		
+		JLabel BMIshow = new JLabel("");
+		BMIshow.setFont(new Font("Yu Gothic UI Semilight", Font.PLAIN, 20));
+		BMIshow.setBounds(395, 49, 245, 39);
+		contentPane.add(BMIshow);
+		
+		//WarmUp pictures 
+				ImageIcon img1 = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Warmup.png")));
+				Image img_1 = img1.getImage();
+				Image dimg = img_1.getScaledInstance(label1.getWidth(), label1.getHeight(), Image.SCALE_SMOOTH);
+				ImageIcon i = new ImageIcon(dimg);
+				label1.setIcon(i);
+				
+				//WarmUp pictures 
+				ImageIcon img2 = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Warmup.png")));
+				Image img_2 = img2.getImage();
+				Image dimg2 = img_2.getScaledInstance(label2.getWidth(), label2.getHeight(), Image.SCALE_SMOOTH);
+				ImageIcon i2 = new ImageIcon(dimg2);
+				label2.setIcon(i2);
+				
+				//WarmUp pictures 
+				ImageIcon img3 = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Warmup.png")));
+				Image img_3 = img3.getImage();
+				Image dimg3 = img_3.getScaledInstance(label3.getWidth(), label3.getHeight(), Image.SCALE_SMOOTH);
+				ImageIcon i3 = new ImageIcon(dimg3);
+				label3.setIcon(i3);
+				
+				//WarmUp pictures 
+				ImageIcon img4 = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Warmup.png")));
+				Image img_4 = img4.getImage();
+				Image dimg4 = img_4.getScaledInstance(label4.getWidth(), label4.getHeight(), Image.SCALE_SMOOTH);
+				ImageIcon i4 = new ImageIcon(dimg4);
+				label4.setIcon(i4);
+				
+			// ----------------------------------------------------------------------------------------------------------------------------------
+				
+				//Workout Picture
+				ImageIcon img5 = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/WHome.png")));
+				Image img_5 = img5.getImage();
+				Image dimg5 = img_5.getScaledInstance(label5.getWidth(), label5.getHeight(), Image.SCALE_SMOOTH);
+				ImageIcon i5 = new ImageIcon(dimg5);
+				label5.setIcon(i5);
+				
+				//Workout pictures 
+				ImageIcon img6 = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/WHome.png")));
+				Image img_6 = img6.getImage();
+				Image dimg6 = img_6.getScaledInstance(label6.getWidth(), label6.getHeight(), Image.SCALE_SMOOTH);
+				ImageIcon i6 = new ImageIcon(dimg6);
+				label6.setIcon(i6);
+				
+				//Workout pictures 
+				ImageIcon img7 = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/WHome.png")));
+				Image img_7 = img7.getImage();
+				Image dimg7 = img_7.getScaledInstance(label7.getWidth(), label7.getHeight(), Image.SCALE_SMOOTH);
+				ImageIcon i7 = new ImageIcon(dimg7);
+				label7.setIcon(i7);
+				
+				//Workout pictures 
+				ImageIcon img8 = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/WHome.png")));
+				Image img_8 = img8.getImage();
+				Image dimg8 = img_8.getScaledInstance(label8.getWidth(), label8.getHeight(), Image.SCALE_SMOOTH);
+				ImageIcon i8 = new ImageIcon(dimg8);
+				label8.setIcon(i8);
+
+		
+	
 	}
 }
